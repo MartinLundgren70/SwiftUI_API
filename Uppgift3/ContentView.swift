@@ -98,7 +98,7 @@ struct ContentView: View {
         }
     }
     
-    // Function to extract the breed name from the URL
+    // Extract the breed name from the URL
     func extractBreedName(from url: String) -> String? {
         let components = url.components(separatedBy: "/")
         if let breedIndex = components.firstIndex(of: "breeds"), breedIndex + 1 < components.count {
@@ -107,7 +107,7 @@ struct ContentView: View {
         return nil
     }
     
-    // Function to format breed name by switching order if it contains two words
+    // Format breed name by switching order if it contains two words
     func formatBreedName(_ breed: String) -> String {
         // Replace dashes with spaces to make it more readable
         let name = breed.replacingOccurrences(of: "-", with: " ")
